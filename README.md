@@ -19,12 +19,19 @@ the room with price €75 should return only and ignore the other room prices
 
 ## Requirements
 
-PHP 7.2+
+PHP 7.4+
 Composer
+Docker
 
 ## Installation
 
-Run in main project folder
+Run docker command to setup php , nginx , composer
+
+```
+docker-compose up -d
+```
+
+Install project dependences
 
 ```
 composer install
@@ -32,19 +39,19 @@ composer install
 
 ## Run Api Script
 
-in browser you can access the project by this link 
+in browser you can access the project by this link
 
 ```
-http://localhost/golodger/
+http://localhost:8080/
 ```
 
-in terminal you can access the project and then write the command
+in terminal you can access the project in root directory and then write the command
 
 ```
 php index.php
 ```
 
-## Run Test Cases
+## Run Test Cases in terminal
 
 ```
 vendor/bin/phpunit tests
