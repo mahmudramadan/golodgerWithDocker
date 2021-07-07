@@ -41,9 +41,9 @@ class ApiService implements SortingInterface
                 $finalRoomsData[$arrIndex] = $roomItemData;
             }
         }
-        usort($finalRoomsData, function ($a, $b) {
-            if ($a['totalPrice'] == $b['totalPrice']) return 0;
-            return $a['totalPrice'] > $b['totalPrice'] ? 1 : -1;
+        usort($finalRoomsData, function ($currentItem, $nextItem) {
+            if ($currentItem['totalPrice'] == $nextItem['totalPrice']) return 0;
+            return $currentItem['totalPrice'] > $nextItem['totalPrice'] ? 1 : -1;
         });
         return $finalRoomsData;
     }
