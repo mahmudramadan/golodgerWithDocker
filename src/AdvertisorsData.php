@@ -53,10 +53,10 @@ class AdvertisorsData
             // sort all hotels and remove duplicated rooms whith more price 
             $apiService = new ApiService();
             $roomSortedData = $apiService->getRoomsAfterSorting($allRooms);
-            echo json_encode(array('status' => 200, 'foundRooms' => true, 'rooms' => $roomSortedData));
-        } else {
+           return json_encode(array('status' => 200, 'foundRooms' => true, 'rooms' => $roomSortedData));
+        } 
             // ther is no hotel rooms
-            echo json_encode(array('status' => 200, 'foundRooms' => false, 'rooms' => []));
-        }
+            return json_encode(array('status' => 200, 'foundRooms' => false, 'rooms' => []));
+        
     }
 }
